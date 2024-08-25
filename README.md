@@ -2,6 +2,10 @@
 
 InstaWP Email Logs is a WordPress plugin that intercepts and logs emails sent from your InstaWP Staging WordPress site.
 
+![CleanShot 2024-08-25 at 14 21 41@2x](https://github.com/user-attachments/assets/878867f1-428c-49c6-9b69-2a255efdfcdb)
+![CleanShot 2024-08-25 at 14 21 34@2x](https://github.com/user-attachments/assets/2fbb0b85-86f2-47a8-8cb9-1d2b60c8a5c1)
+
+
 ## Features
 
 - Intercepts and logs all outgoing emails
