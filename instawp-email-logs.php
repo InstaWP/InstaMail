@@ -96,6 +96,7 @@ function instawp_email_logs_page() {
     }
 
     $current_password = get_option('instawp_email_logs_password', '');
+    $password_set = !empty($current_password);
     $public_url = plugins_url('public-email-logs.php', __FILE__);
 
     echo '<div class="wrap">';
@@ -108,7 +109,7 @@ function instawp_email_logs_page() {
     wp_nonce_field('instawp_email_logs_action', 'instawp_email_logs_nonce');
     echo '<div class="mb-4">';
     echo '<label for="instawp_email_logs_password" class="block text-sm font-bold mb-2">' . __('Access Password', 'instawp-email-logs') . '</label>';
-    echo '<input type="text" name="instawp_email_logs_password" id="instawp_email_logs_password" value="' . esc_attr($current_password) . '" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">';
+    echo '<input type="password" name="instawp_email_logs_password" id="instawp_email_logs_password" placeholder="' . ($password_set ? __('Password set', 'instawp-email-logs') : __('Enter new password', 'instawp-email-logs')) . '" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">';
     echo '</div>';
     echo '<div class="flex items-center justify-between">';
     echo '<input type="submit" name="submit" id="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" value="' . __('Save Changes', 'instawp-email-logs') . '">';
